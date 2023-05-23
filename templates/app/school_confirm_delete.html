@@ -1,0 +1,23 @@
+{% extends 'app/dumy.html' %}
+
+{% block tittle %}
+    <title>Delete data page</title>
+{% endblock %}
+
+
+{% block body_block %}
+   <center>
+    <form  method="POST">
+        {% csrf_token %}
+        <br><br>
+        <h1>Delete the data of {{school.name}}</h1>
+        <br>
+        
+        <input type="submit" value="Yes-Delete" class="btn btn-danger">
+        <a href="{% url 'list_school' %}" class=" btn btn-secondary">no-Go-Back</a>
+    </form>
+
+   </center>
+   
+
+{% endblock %}
